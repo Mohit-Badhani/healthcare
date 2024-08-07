@@ -56,6 +56,7 @@ export const AppointmentForm = ({
   const onSubmit = async (
     values: z.infer<typeof AppointmentFormValidation>
   ) => {
+    console.log("IM SUBMITING", { type });
     setIsLoading(true);
 
     let status;
@@ -101,6 +102,7 @@ export const AppointmentForm = ({
             cancellationReason: values.cancellationReason,
           },
           type,
+          timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone,
         };
 
         const updatedAppointment = await updateAppointment(appointmentToUpdate);
