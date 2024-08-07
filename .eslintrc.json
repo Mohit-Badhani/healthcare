@@ -1,6 +1,7 @@
 {
   "plugins": ["import"],
   "extends": [
+    "next",
     "next/core-web-vitals",
     "standard",
     "plugin:tailwindcss/recommended",
@@ -8,6 +9,8 @@
   ],
   "rules": {
     "no-undef": "off",
+    "react/no-unescaped-entities": "off",
+    "@next/next/no-page-custom-font": "off",
     "import/order": [
       "error",
       {
