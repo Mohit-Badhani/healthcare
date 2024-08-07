@@ -1,6 +1,7 @@
 import * as Sentry from "@sentry/nextjs";
 import Image from "next/image";
 import Link from "next/link";
+
 import { Button } from "@/components/ui/button";
 import { Doctors } from "@/constants";
 import { getAppointment } from "@/lib/actions/appointment.actions";
